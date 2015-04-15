@@ -1,6 +1,9 @@
 package downloader;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -148,12 +151,11 @@ public class HttpRequest {
 	}
 
 	public static void main(String[] args) throws IOException {
-		// HttpResponse response =
-		// HttpRequest.requestPost("https://www.baidu.com/", "tn=sitehao123");
-		// BufferedWriter bw = new BufferedWriter(new FileWriter(new
-		// File("dataRepository/bdhome.txt")));
-		// bw.write(response.getBody());
-		// bw.close();
+		HttpResponse response =HttpRequest.requestPost(
+				"http://sourceforge.net/p/diseaseontology/code/HEAD/tree/trunk/HumanDO.obo", "format=raw");
+		BufferedWriter bw = new BufferedWriter(new FileWriter(new File("dataRepository/HumanDO.obo")));
+		bw.write(response.getBody());
+		bw.close();
 
 	}
 }

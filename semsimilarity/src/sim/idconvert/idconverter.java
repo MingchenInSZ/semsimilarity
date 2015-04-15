@@ -39,7 +39,7 @@ public class idconverter {
 		String url = "jdbc:mysql://localhost:3306/geneonto";
 		try {
 			Class.forName(driver);
-			Connection conn = DriverManager.getConnection(url, "user", "passwd");
+			Connection conn = DriverManager.getConnection(url, "root", "aaa");
 			return conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
