@@ -98,7 +98,7 @@ public class SigPathway {
 			HashSet<String> difGenes, int nperms) {
 
 		int inter = overlap(pathwayGenes, difGenes), count = 0;
-		if (inter == 0) {
+		if (inter == 0 || inter * 1.0 / pathwayGenes.size() < 0.1) {
 			return -1.0;
 		}
 		for (int i = 0; i < nperms; i++) {

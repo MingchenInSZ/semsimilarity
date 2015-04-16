@@ -28,7 +28,7 @@ public class SaveItemFile {
 	 * @throws IOException
 	 */
 	public SaveItemFile(String name,long pos) throws IOException{
-		itemFile = new RandomAccessFile(name, "rwd");
+		itemFile = new RandomAccessFile(name, "rw");
 		itemFile.seek(pos);
 
 	}

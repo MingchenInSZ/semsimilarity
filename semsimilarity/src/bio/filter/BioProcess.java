@@ -41,13 +41,6 @@ public class BioProcess {
 					gene = app_sym;
 				}
 				map.put(String.valueOf(count++), gene);
-				String synonyms = rs.getString("synonyms").trim();
-				if (synonyms != null && !"".equals(synonyms)) {
-					String[] genes = synonyms.split(",");
-					for (String g : genes) {
-						map.put(String.valueOf(count++), g);
-					}
-				}
 			}
 			System.out.println("dump total genes:" + map.size());
 			totalDistinctGenes = map.size();
