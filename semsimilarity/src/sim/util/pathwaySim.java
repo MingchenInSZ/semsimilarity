@@ -121,6 +121,7 @@ public class pathwaySim {
 	 *             This method calculate the pathway similarity in multi thread
 	 *             model
 	 */
+	// NOTE ******************************************NOT WORK WELL
 	public void pathwaySemSimMulti(String fileName) throws ClassNotFoundException,
 	IOException, InterruptedException {
 		HashMap<String, LinkedHashSet<String>> map = getSigPathway(fileName);
@@ -228,6 +229,7 @@ public class pathwaySim {
 		}
 		cw.close();
 	}
+
 	public static void main(String[] args) throws InterruptedException,
 	ClassNotFoundException, IOException {
 

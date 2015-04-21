@@ -44,6 +44,11 @@ public class GeneSimNetwork {
 		return difGenes;
 	}
 
+	/**
+	 * dump gene sim into file specified by fileName
+	 * 
+	 * @param fileName
+	 */
 	public void dumpGeneSim(String fileName) {
 		String realFile = wdir + File.separator + fileName;
 		try {
@@ -74,6 +79,7 @@ public class GeneSimNetwork {
 		}
 	}
 
+	// dump genesim in single tread
 	public static void main(String[] args) {
 		GeneSimNetwork gsn = new GeneSimNetwork();
 		gsn.dumpGeneSim("difGeneSim.txt");
